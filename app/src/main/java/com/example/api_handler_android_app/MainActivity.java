@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
         textView=findViewById(R.id.textView);
         button=findViewById(R.id.button);
 
-        requestQueue= Volley.newRequestQueue(this);
+//        requestQueue= Volley.newRequestQueue(this);
+        requestQueue=VolleySingleton.getInstance(this).getRequestQueue();
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
